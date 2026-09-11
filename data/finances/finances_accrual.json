@@ -1,0 +1,1429 @@
+{
+  "tagging_system": {
+    "principle": "Every transaction receives one or more standardized, recognizable tags. Original document wording is never replaced.",
+    "tag_style": "lowercase_snake_case",
+    "multi_tag": true,
+    "tag_groups": {
+      "flow": [
+        "income",
+        "expense",
+        "transfer",
+        "opening_balance",
+        "closing_balance"
+      ],
+      "income_type": [
+        "monthly_quarterly_contribution",
+        "activity_contribution",
+        "donation",
+        "institutional_contribution",
+        "interest_income",
+        "other_income"
+      ],
+      "expense_type": [
+        "opex",
+        "capex",
+        "capex_candidate",
+        "maintenance",
+        "repair",
+        "cleaning",
+        "utilities",
+        "electricity",
+        "consumables",
+        "office_supplies",
+        "printing",
+        "fuel",
+        "sports",
+        "event",
+        "food",
+        "catering",
+        "equipment",
+        "materials",
+        "rental",
+        "service",
+        "prize",
+        "miscellaneous"
+      ],
+      "functional_area": [
+        "food_waste",
+        "club",
+        "quarters",
+        "incinerator",
+        "onam",
+        "badminton",
+        "carrom",
+        "office",
+        "watch_tower"
+      ],
+      "asset_type": [
+        "building",
+        "electrical",
+        "furniture",
+        "audio_equipment",
+        "sports_equipment",
+        "vehicle",
+        "computer_equipment",
+        "other_equipment"
+      ],
+      "confidence": [
+        "high",
+        "medium",
+        "low"
+      ]
+    }
+  },
+  "transactions": [
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Opening Balances",
+      "raw_description": "Cash Balance as on 22.12.2025",
+      "amount": 3800.0,
+      "tags": [
+        "opening_balance"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 3800.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Opening Balances",
+      "raw_description": "Bank Balance as on 01.02.2026",
+      "amount": 58016.0,
+      "tags": [
+        "opening_balance"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 58016.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Monthly/Quarterly Contributions",
+      "raw_description": "Monthly/Quarterly Contributions 03.2026",
+      "amount": 4900.0,
+      "tags": [
+        "income",
+        "monthly_quarterly_contribution"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "monthly",
+        "period_months": 1,
+        "recognized_amount_per_period": 4900.0,
+        "recognition_status": "classified_from_tag"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Monthly/Quarterly Contributions",
+      "raw_description": "Monthly/Quarterly Contribution 04.2026",
+      "amount": 5000.0,
+      "tags": [
+        "income",
+        "monthly_quarterly_contribution"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "monthly",
+        "period_months": 1,
+        "recognized_amount_per_period": 5000.0,
+        "recognition_status": "classified_from_tag"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Monthly/Quarterly Contributions",
+      "raw_description": "Monthly/Quarterly Contribution 05.2026",
+      "amount": 5000.0,
+      "tags": [
+        "income",
+        "monthly_quarterly_contribution"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "monthly",
+        "period_months": 1,
+        "recognized_amount_per_period": 5000.0,
+        "recognition_status": "classified_from_tag"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Other Contributions",
+      "raw_description": "Contribution from Quarters for Dinner on 06.02.2026",
+      "amount": 16000.0,
+      "tags": [
+        "income",
+        "activity_contribution",
+        "food",
+        "catering"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "event",
+        "period_months": 1,
+        "recognized_amount_per_period": 16000.0,
+        "recognition_status": "event_specific_unless_source_identifies_a_covered_period"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Catering and Capital Expenses",
+      "raw_description": "Catering for dinner expense",
+      "amount": 22800.0,
+      "tags": [
+        "expense",
+        "opex",
+        "food",
+        "catering",
+        "event"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 22800.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Catering and Capital Expenses",
+      "raw_description": "Service Charge for Catering dinner expense",
+      "amount": 2700.0,
+      "tags": [
+        "expense",
+        "opex",
+        "catering",
+        "service",
+        "event"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 2700.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Catering and Capital Expenses",
+      "raw_description": "Chair Desk with Sound",
+      "amount": 3500.0,
+      "tags": [
+        "expense",
+        "capex",
+        "equipment",
+        "furniture"
+      ],
+      "tag_confidence": "medium",
+      "tag_basis": "Transaction appears under the source document heading 'Catering and Capital Expenses'. The item itself appears asset-like, but the document does not provide an explicit accounting classification.",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 3500.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Club Electricity Bills",
+      "raw_description": "Club Electricity Bill for February 2026",
+      "amount": 706.0,
+      "tags": [
+        "expense",
+        "opex",
+        "utilities",
+        "electricity",
+        "club"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 706.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Club Electricity Bills",
+      "raw_description": "Club Electricity Bill for March 2026",
+      "amount": 2.0,
+      "tags": [
+        "expense",
+        "opex",
+        "utilities",
+        "electricity",
+        "club"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 2.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Club Electricity Bills",
+      "raw_description": "Club Electricity Bill for May 2026",
+      "amount": 472.0,
+      "tags": [
+        "expense",
+        "opex",
+        "utilities",
+        "electricity",
+        "club"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 472.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Water bottle for incinerator workers",
+      "amount": 80.0,
+      "tags": [
+        "expense",
+        "opex",
+        "consumables",
+        "incinerator"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 80.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Seal Purchase",
+      "amount": 330.0,
+      "tags": [
+        "expense",
+        "opex",
+        "office_supplies",
+        "office"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 330.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Punch Pad",
+      "amount": 230.0,
+      "tags": [
+        "expense",
+        "opex",
+        "office_supplies",
+        "office"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 230.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Ink",
+      "amount": 170.0,
+      "tags": [
+        "expense",
+        "opex",
+        "office_supplies",
+        "office"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 170.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Cable",
+      "amount": 100.0,
+      "tags": [
+        "expense",
+        "opex",
+        "materials"
+      ],
+      "tag_confidence": "medium",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 100.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Pipe Repair near Club",
+      "amount": 412.0,
+      "tags": [
+        "expense",
+        "opex",
+        "repair",
+        "maintenance",
+        "club"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 412.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Major Expenses",
+      "raw_description": "Electrical Work for watch tower",
+      "amount": 2600.0,
+      "tags": [
+        "expense",
+        "opex",
+        "maintenance",
+        "electrical",
+        "watch_tower"
+      ],
+      "tag_confidence": "medium",
+      "capex_status": "not_classified_as_capex",
+      "capex_reason": "Document says 'Major Expenses', not 'Capital Expenses'; electrical work could be maintenance or improvement.",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 2600.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Major Expenses",
+      "raw_description": "Amplifier Repairing",
+      "amount": 2300.0,
+      "tags": [
+        "expense",
+        "opex",
+        "repair",
+        "audio_equipment"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 2300.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Quarter Cleaning Expenses",
+      "raw_description": "Quarter Cleaning *",
+      "amount": 2592.0,
+      "tags": [
+        "expense",
+        "opex",
+        "cleaning",
+        "quarters"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 2592.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Quarter Cleaning Expenses",
+      "raw_description": "Quarter Cleaning **",
+      "amount": 3600.0,
+      "tags": [
+        "expense",
+        "opex",
+        "cleaning",
+        "quarters"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 3600.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Food Waste Cleaning Expenses",
+      "raw_description": "Food Waste Cleaning 01.01.2026",
+      "amount": 500.0,
+      "tags": [
+        "expense",
+        "opex",
+        "cleaning",
+        "food_waste"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 500.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Food Waste Cleaning Expenses",
+      "raw_description": "Food Waste Cleaning 05.02.2026",
+      "amount": 600.0,
+      "tags": [
+        "expense",
+        "opex",
+        "cleaning",
+        "food_waste"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 600.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Food Waste Cleaning Expenses",
+      "raw_description": "Food Waste Cleaning 08.03.2026",
+      "amount": 500.0,
+      "tags": [
+        "expense",
+        "opex",
+        "cleaning",
+        "food_waste"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 500.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Food Waste Cleaning Expenses",
+      "raw_description": "Food Waste Cleaning 03.04.2026",
+      "amount": 700.0,
+      "tags": [
+        "expense",
+        "opex",
+        "cleaning",
+        "food_waste"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 700.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Food Waste Cleaning Expenses",
+      "raw_description": "Food Waste Cleaning 25.04.2026",
+      "amount": 700.0,
+      "tags": [
+        "expense",
+        "opex",
+        "cleaning",
+        "food_waste"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 700.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "05.2026.pdf",
+      "raw_category": "Food Waste Cleaning Expenses",
+      "raw_description": "Food Waste Cleaning 10.05.2026",
+      "amount": 800.0,
+      "tags": [
+        "expense",
+        "opex",
+        "cleaning",
+        "food_waste"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 800.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "06.2026.pdf",
+      "raw_category": "Regular Expenses",
+      "raw_description": "Food Waste Cleaning 26.05.2026",
+      "amount": 800.0,
+      "tags": [
+        "expense",
+        "opex",
+        "cleaning",
+        "food_waste"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 800.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "06.2026.pdf",
+      "raw_category": "Regular Expenses",
+      "raw_description": "Food Waste Cleaning 11.06.2026",
+      "amount": 900.0,
+      "tags": [
+        "expense",
+        "opex",
+        "cleaning",
+        "food_waste"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 900.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "06.2026.pdf",
+      "raw_category": "Regular Expenses",
+      "raw_description": "Food Waste Cleaning 30.06.2026",
+      "amount": 1100.0,
+      "tags": [
+        "expense",
+        "opex",
+        "cleaning",
+        "food_waste"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 1100.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "06.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Phenoil (5 Bottles)",
+      "amount": 300.0,
+      "tags": [
+        "expense",
+        "opex",
+        "consumables",
+        "cleaning"
+      ],
+      "tag_confidence": "medium",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 300.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "06.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Register Book (1 Nos)",
+      "amount": 70.0,
+      "tags": [
+        "expense",
+        "opex",
+        "office_supplies",
+        "office"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 70.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "06.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Camphor (6 Nos)",
+      "amount": 163.0,
+      "tags": [
+        "expense",
+        "opex",
+        "consumables"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 163.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "06.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Envelope Printing",
+      "amount": 350.0,
+      "tags": [
+        "expense",
+        "opex",
+        "printing",
+        "office"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 350.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "06.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Everspread Chemical",
+      "amount": 900.0,
+      "tags": [
+        "expense",
+        "opex",
+        "consumables",
+        "cleaning"
+      ],
+      "tag_confidence": "medium",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 900.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "07.2026.pdf",
+      "raw_category": "Regular Expenses",
+      "raw_description": "Food Waste Cleaning 28.07.2026",
+      "amount": 1100.0,
+      "tags": [
+        "expense",
+        "opex",
+        "cleaning",
+        "food_waste"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 1100.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "07.2026.pdf",
+      "raw_category": "Regular Expenses",
+      "raw_description": "Electricity Bill for Club",
+      "amount": 631.0,
+      "tags": [
+        "expense",
+        "opex",
+        "utilities",
+        "electricity",
+        "club"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 631.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "07.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Bleaching Powder",
+      "amount": 100.0,
+      "tags": [
+        "expense",
+        "opex",
+        "consumables",
+        "cleaning"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 100.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "07.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Diesel (3 Liter)",
+      "amount": 370.0,
+      "tags": [
+        "expense",
+        "opex",
+        "fuel"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 370.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "07.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Petrol",
+      "amount": 200.0,
+      "tags": [
+        "expense",
+        "opex",
+        "fuel"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 200.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "07.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Extenslon Cable Rent",
+      "normalized_description": "Extension Cable Rent",
+      "amount": 300.0,
+      "tags": [
+        "expense",
+        "opex",
+        "rental",
+        "electrical"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 300.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "07.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Cleaning Items",
+      "amount": 249.0,
+      "tags": [
+        "expense",
+        "opex",
+        "cleaning",
+        "consumables"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 249.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "07.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Carrom Board Repair",
+      "amount": 460.0,
+      "tags": [
+        "expense",
+        "opex",
+        "repair",
+        "sports",
+        "carrom"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 460.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "07.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Packing Materials",
+      "amount": 450.0,
+      "tags": [
+        "expense",
+        "opex",
+        "materials"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 450.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "07.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Carrom Advance",
+      "amount": 500.0,
+      "tags": [
+        "expense",
+        "opex",
+        "sports",
+        "carrom"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 500.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "07.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Carrom Coin and Powder",
+      "amount": 725.0,
+      "tags": [
+        "expense",
+        "opex",
+        "sports",
+        "carrom",
+        "consumables"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 725.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "07.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Doormat",
+      "amount": 268.0,
+      "tags": [
+        "expense",
+        "opex",
+        "consumables",
+        "quarters"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 268.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "07.2026.pdf",
+      "raw_category": "Major Expenses",
+      "raw_description": "Cleaning for surrounding area of Incinerator",
+      "amount": 1000.0,
+      "tags": [
+        "expense",
+        "opex",
+        "cleaning",
+        "incinerator"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 1000.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "07.2026.pdf",
+      "raw_category": "Major Expenses",
+      "raw_description": "Badminton Court Fee",
+      "amount": 3000.0,
+      "tags": [
+        "expense",
+        "opex",
+        "sports",
+        "badminton",
+        "rental",
+        "service"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 3000.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "07.2026.pdf",
+      "raw_category": "Major Expenses",
+      "raw_description": "Carrom Final Expense",
+      "amount": 2125.0,
+      "tags": [
+        "expense",
+        "opex",
+        "sports",
+        "carrom"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 2125.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "08.2026.pdf",
+      "raw_category": "Regular Expenses",
+      "raw_description": "Food Waste Cleaning on 25.08.2026",
+      "amount": 1200.0,
+      "tags": [
+        "expense",
+        "opex",
+        "cleaning",
+        "food_waste"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 1200.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "08.2026.pdf",
+      "raw_category": "Regular Expenses",
+      "raw_description": "Food Waste Cleaning on 04.09.2026",
+      "amount": 1200.0,
+      "tags": [
+        "expense",
+        "opex",
+        "cleaning",
+        "food_waste"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 1200.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "08.2026.pdf",
+      "raw_category": "Major Expenses",
+      "raw_description": "Onam Celebration - Major Expenses",
+      "amount": 28580.0,
+      "tags": [
+        "expense",
+        "opex",
+        "event",
+        "onam",
+        "capex_candidate"
+      ],
+      "tag_confidence": "medium",
+      "capex_status": "not_capex",
+      "capex_reason": "The heading is 'Major Expenses', not capital expenditure. Annexure shows catering, tent/table and flowers; these are event costs rather than identifiable fixed assets.",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 28580.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "08.2026.pdf",
+      "raw_category": "Major Expenses",
+      "raw_description": "Bandminton Prizes - Conducted on 08.2026",
+      "amount": 3516.0,
+      "tags": [
+        "expense",
+        "opex",
+        "sports",
+        "badminton",
+        "prize"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 3516.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "08.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Onam Celebration - Petty Expenses",
+      "amount": 2627.0,
+      "tags": [
+        "expense",
+        "opex",
+        "event",
+        "onam"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 2627.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "08.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Payment to Dixon for Onam",
+      "amount": 1000.0,
+      "tags": [
+        "expense",
+        "opex",
+        "event",
+        "onam",
+        "service"
+      ],
+      "tag_confidence": "medium",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 1000.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "08.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Phenoyl",
+      "amount": 125.0,
+      "tags": [
+        "expense",
+        "opex",
+        "cleaning",
+        "consumables"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 125.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "08.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Paint",
+      "amount": 380.0,
+      "tags": [
+        "expense",
+        "opex",
+        "materials",
+        "maintenance"
+      ],
+      "tag_confidence": "medium",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 380.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "08.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Incinerator Surrounding Cleaning",
+      "amount": 300.0,
+      "tags": [
+        "expense",
+        "opex",
+        "cleaning",
+        "incinerator"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 300.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "08.2026.pdf",
+      "raw_category": "Petty Expenses",
+      "raw_description": "Cement",
+      "amount": 200.0,
+      "tags": [
+        "expense",
+        "opex",
+        "materials",
+        "maintenance"
+      ],
+      "tag_confidence": "medium",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 200.0,
+        "recognition_status": "expense_or_balance; not_income_recognition"
+      }
+    },
+    {
+      "source_file": "08.2026.pdf",
+      "raw_category": "Other Contributions",
+      "raw_description": "Onam Sadhya Contributions",
+      "amount": 2450.0,
+      "tags": [
+        "income",
+        "activity_contribution",
+        "event",
+        "onam",
+        "food"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "event",
+        "period_months": 1,
+        "recognized_amount_per_period": 2450.0,
+        "recognition_status": "event_specific_unless_source_identifies_a_covered_period"
+      }
+    },
+    {
+      "source_file": "08.2026.pdf",
+      "raw_category": "Other Contributions",
+      "raw_description": "Carrom/Badminton Contributions",
+      "amount": 460.0,
+      "tags": [
+        "income",
+        "activity_contribution",
+        "sports",
+        "carrom",
+        "badminton"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "event",
+        "period_months": 1,
+        "recognized_amount_per_period": 460.0,
+        "recognition_status": "event_specific_unless_source_identifies_a_covered_period"
+      }
+    },
+    {
+      "source_file": "08.2026.pdf",
+      "raw_category": "Other Contributions",
+      "raw_description": "Contribution from the Chief Commissioner",
+      "amount": 10000.0,
+      "tags": [
+        "income",
+        "institutional_contribution",
+        "donation"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "unknown",
+        "period_months": null,
+        "recognized_amount_per_period": null,
+        "recognition_status": "requires_supporting_period"
+      }
+    },
+    {
+      "source_file": "08.2026.pdf",
+      "raw_category": "Other Contributions",
+      "raw_description": "Contribution from Society",
+      "amount": 15000.0,
+      "tags": [
+        "income",
+        "institutional_contribution",
+        "donation"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "unknown",
+        "period_months": null,
+        "recognized_amount_per_period": null,
+        "recognition_status": "requires_supporting_period"
+      }
+    },
+    {
+      "source_file": "08.2026.pdf",
+      "raw_category": "Interest",
+      "raw_description": "Interest on SBI Savings Account (from 09.2025 - 06.2026)",
+      "amount": 1010.0,
+      "tags": [
+        "income",
+        "interest_income"
+      ],
+      "tag_confidence": "high",
+      "recognition": {
+        "basis": "point_in_time",
+        "period_months": 1,
+        "recognized_amount_per_period": 1010.0,
+        "recognition_status": "recognized_as_reported"
+      }
+    }
+  ],
+  "capex_policy": {
+    "capex_definition": "Use capex only when the transaction itself represents acquisition, construction, installation, or substantial improvement of an asset with continuing benefit.",
+    "do_not_use_capex_for": [
+      "repairs",
+      "routine maintenance",
+      "cleaning",
+      "electricity",
+      "fuel",
+      "rent",
+      "catering",
+      "food",
+      "prizes",
+      "ordinary consumables",
+      "event supplies"
+    ],
+    "use_capex_candidate_when": [
+      "The item appears potentially asset-like but the source does not explicitly establish capital treatment.",
+      "The description suggests equipment, furniture, infrastructure, or a durable asset but evidence is insufficient."
+    ],
+    "examples_from_documents": {
+      "chair_desk_with_sound": {
+        "classification": "capex",
+        "confidence": "medium",
+        "reason": "Listed under the source heading 'Catering and Capital Expenses' and appears to represent a durable item."
+      },
+      "electrical_work_for_watch_tower": {
+        "classification": "opex",
+        "secondary_tag": "maintenance",
+        "confidence": "medium",
+        "reason": "Source only says 'Major Expenses'; it does not establish that a new asset or capital improvement was created."
+      },
+      "amplifier_repairing": {
+        "classification": "opex",
+        "secondary_tag": "repair",
+        "confidence": "high",
+        "reason": "Repair of an existing amplifier is ordinarily a repair expense; source explicitly says 'Repairing'."
+      },
+      "carrom_board_repair": {
+        "classification": "opex",
+        "secondary_tag": "repair",
+        "confidence": "high"
+      },
+      "onam_catering": {
+        "classification": "opex",
+        "secondary_tag": "event",
+        "confidence": "high"
+      },
+      "tent_table": {
+        "classification": "opex",
+        "secondary_tag": "event",
+        "confidence": "medium",
+        "reason": "Annexure identifies it as an Onam event expense but does not establish ownership or durable asset acquisition."
+      }
+    }
+  },
+  "recognition_policy": {
+    "principle": "Separate cash timing from income recognition. Recognize period-based contributions over the period they are intended to fund; recognize event-specific contributions against the related event; do not infer a period when the source does not establish one.",
+    "cash_basis_field": "amount",
+    "recognition_basis_field": "recognition.basis",
+    "allowed_basis": [
+      "monthly",
+      "period",
+      "event",
+      "point_in_time",
+      "unknown"
+    ],
+    "period_months_rule": "Required only when recognition.basis is period.",
+    "recognized_amount_rule": "For period-based income, recognized_amount_per_period = amount / period_months. For monthly, event, and point_in_time income, recognized amount is the full amount in the applicable period. Unknown remains unallocated until supporting evidence is available.",
+    "cash_flow_rule": "Always retain the original amount in the cash-flow view in the receipt/payment period.",
+    "no_inference_rule": "Do not classify an income receipt as quarterly, annual, or otherwise period-based solely from its description unless the source establishes the covered period."
+  },
+  "recognition_review_queue": [
+    {
+      "source_file": "05.2026.pdf",
+      "raw_description": "Contribution from Quarters for Dinner on 06.02.2026",
+      "amount": 16000.0,
+      "current_basis": "event",
+      "question": "Does the source establish a covered period (e.g. quarter) for this contribution?",
+      "action_if_confirmed": "Set recognition.basis='period', specify period_months, and calculate recognized_amount_per_period."
+    },
+    {
+      "source_file": "08.2026.pdf",
+      "raw_description": "Onam Sadhya Contributions",
+      "amount": 2450.0,
+      "current_basis": "event",
+      "question": "Does the source establish a covered period (e.g. quarter) for this contribution?",
+      "action_if_confirmed": "Set recognition.basis='period', specify period_months, and calculate recognized_amount_per_period."
+    },
+    {
+      "source_file": "08.2026.pdf",
+      "raw_description": "Carrom/Badminton Contributions",
+      "amount": 460.0,
+      "current_basis": "event",
+      "question": "Does the source establish a covered period (e.g. quarter) for this contribution?",
+      "action_if_confirmed": "Set recognition.basis='period', specify period_months, and calculate recognized_amount_per_period."
+    }
+  ]
+}

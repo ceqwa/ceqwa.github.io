@@ -1,0 +1,117 @@
+{
+  "periods": [
+    "May 2026",
+    "June 2026",
+    "July 2026",
+    "August 2026"
+  ],
+  "income_recurring": [
+    14900.0,
+    5100.0,
+    23500.0,
+    1500.0
+  ],
+  "income_one_off": [
+    16000.0,
+    0,
+    1610.0,
+    28920.0
+  ],
+  "expense_recurring": [
+    14694.0,
+    4583.0,
+    4835.0,
+    2825.0
+  ],
+  "expense_one_off": [
+    31700.0,
+    0,
+    6643.0,
+    36303.0
+  ],
+  "closing_balance": [
+    46322,
+    46839,
+    60471,
+    51763
+  ],
+  "expense_recurring_breakdown": [
+    {
+      "category": "Food Waste Cleaning",
+      "amount": 10100.0,
+      "tags": ["expense", "recurring", "cleaning", "food_waste"]
+    },
+    {
+      "category": "Quarter Cleaning",
+      "amount": 6192.0,
+      "tags": ["expense", "recurring", "cleaning", "quarters"]
+    },
+    {
+      "category": "Club Electricity",
+      "amount": 1337.0,
+      "tags": ["expense", "recurring", "utilities", "electricity", "club"]
+    },
+    {
+      "category": "Everspread Chemical",
+      "amount": 900.0,
+      "tags": ["expense", "recurring", "cleaning", "consumables"]
+    },
+    {
+      "category": "Sports Activities",
+      "amount": 725.0,
+      "tags": ["expense", "recurring", "sports", "carrom"]
+    },
+    {
+      "category": "Amplifier Repair",
+      "amount": 2300.0,
+      "tags": ["expense", "recurring", "repair", "audio_equipment"]
+    },
+    {
+      "category": "Incinerator Cleaning",
+      "amount": 1000.0,
+      "tags": ["expense", "recurring", "cleaning", "incinerator"]
+    },
+    {
+      "category": "Other Recurring Expenses (< Rs. 500)",
+      "amount": 4383.0,
+      "tags": ["expense", "recurring", "small_expense"]
+    }
+  ],
+  "expense_one_off_breakdown": [
+    {
+      "category": "Catering and Capital Expenses",
+      "amount": 29000.0,
+      "tags": ["expense", "one_off", "food", "catering", "event"]
+    },
+    {
+      "category": "Onam Celebration",
+      "amount": 28580.0,
+      "tags": ["expense", "one_off", "event", "onam"]
+    },
+    {
+      "category": "Sports Activities",
+      "amount": 9141.0,
+      "tags": ["expense", "one_off", "sports", "badminton", "carrom"]
+    },
+    {
+      "category": "Watch Tower Electrical Work",
+      "amount": 2600.0,
+      "tags": ["expense", "one_off", "maintenance", "electrical", "watch_tower"]
+    },
+    {
+      "category": "Onam Petty Expenses",
+      "amount": 2627.0,
+      "tags": ["expense", "one_off", "event", "onam"]
+    },
+    {
+      "category": "Payment to Dixon for Onam",
+      "amount": 1000.0,
+      "tags": ["expense", "one_off", "event", "onam", "service"]
+    },
+    {
+      "category": "Other One-off Expenses (< Rs. 500)",
+      "amount": 1698.0,
+      "tags": ["expense", "one_off", "small_expense"]
+    }
+  ]
+}

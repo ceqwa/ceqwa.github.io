@@ -1,0 +1,30 @@
+[
+  {
+    "description": "Sources and Uses of Funds Statement (22.12.2025 - 18.05.2026)",
+    "period": "May 2026",
+    "amount": "Rs. 92,716",
+    "file": "financials/05.2026.pdf",
+    "markdown": "financials/05.2026.md"
+  },
+  {
+    "description": "Sources and Uses of Funds Statement - June 2026",
+    "period": "June 2026",
+    "amount": "Rs. 51,422",
+    "file": "financials/06.2026.pdf",
+    "markdown": "financials/06.2026.md"
+  },
+  {
+    "description": "Sources and Uses of Funds Statement - July 2026",
+    "period": "July 2026",
+    "amount": "Rs. 71,949",
+    "file": "financials/07.2026.pdf",
+    "markdown": "financials/07.2026.md"
+  },
+  {
+    "description": "Sources and Uses of Funds Statement - August 2026",
+    "period": "August 2026",
+    "amount": "Rs. 90,891",
+    "file": "financials/08.2026.pdf",
+    "markdown": "financials/08.2026.md"
+  }
+]
