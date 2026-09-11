@@ -46,6 +46,11 @@ nav a:hover {
   text-decoration: underline;
 }
 
+nav a.active {
+  color: #1a5276;
+  text-decoration: underline;
+}
+
 main section {
   margin-bottom: 2.5rem;
 }
