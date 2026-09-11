@@ -5,6 +5,14 @@
   var transactions = [];
   function amount(value) { return Number(value || 0); }
   function hasTag(row, tag) { return (row.tags || []).indexOf(tag) !== -1; }
+  function incomeLabel(row) {
+    if (hasTag(row, 'monthly_quarterly_contribution')) return 'Monthly/Quarterly Contributions';
+    if (hasTag(row, 'interest_income')) return 'Interest Income';
+    if (hasTag(row, 'institutional_contribution')) return row.raw_description || 'Institutional Contribution';
+    if (hasTag(row, 'activity_contribution')) return row.raw_description || 'Activity Contribution';
+    if (hasTag(row, 'donation')) return 'Donations';
+    return row.raw_category || 'Other Income';
+  }
   function expenseLabel(row) {
     if (hasTag(row, 'food_waste')) return 'Food Waste Cleaning';
     if (hasTag(row, 'onam')) return 'Onam Celebration';
@@ -50,7 +58,7 @@
     var incomeTotal = income.reduce(function (total, row) { return total + amount(row.amount); }, 0);
     var expenseTotal = expenses.reduce(function (total, row) { return total + amount(row.amount); }, 0);
     var openingTotal = opening.reduce(function (total, row) { return total + amount(row.amount); }, 0);
-    var incomeByCategory = grouped(income, 'raw_category');
+    var incomeByCategory = grouped(income, incomeLabel);
     var expenseByCategory = grouped(expenses, expenseLabel);
     var activities = Array.from(new Set(incomeByCategory.concat(expenseByCategory).map(function (row) { return row.label; })));
     var incomeMap = {}, expenseMap = {};

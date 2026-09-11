@@ -46,11 +46,11 @@
 
     Plotly.newPlot('chart-income-expense', [
       { name: 'Income: Recurring', type: 'bar', x: incomePositions, y: data.income_recurring, customdata: data.periods, hovertemplate: '%{customdata}<br>Income: Recurring: Rs. %{y:,.0f}<extra></extra>', width: 0.35, marker: { color: getComputedStyle(document.documentElement).getPropertyValue('--chart-3').trim() } },
-      { name: 'Income: One-off', type: 'bar', x: incomePositions, y: data.income_one_off, base: data.income_recurring, customdata: data.periods, hovertemplate: '%{customdata}<br>Income: One-off: Rs. %{y:,.0f}<extra></extra>', width: 0.35, marker: { color: getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() } },
+      { name: 'Income: One-off', type: 'bar', x: incomePositions, y: data.income_one_off, customdata: data.periods, hovertemplate: '%{customdata}<br>Income: One-off: Rs. %{y:,.0f}<extra></extra>', width: 0.35, marker: { color: getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() } },
       { name: 'Expenses: Recurring', type: 'bar', x: expensePositions, y: data.expense_recurring, customdata: data.periods, hovertemplate: '%{customdata}<br>Expenses: Recurring: Rs. %{y:,.0f}<extra></extra>', width: 0.35, marker: { color: getComputedStyle(document.documentElement).getPropertyValue('--chart-1').trim() } },
-      { name: 'Expenses: One-off', type: 'bar', x: expensePositions, y: data.expense_one_off, base: data.expense_recurring, customdata: data.periods, hovertemplate: '%{customdata}<br>Expenses: One-off: Rs. %{y:,.0f}<extra></extra>', width: 0.35, marker: { color: getComputedStyle(document.documentElement).getPropertyValue('--chart-5').trim() } }
+      { name: 'Expenses: One-off', type: 'bar', x: expensePositions, y: data.expense_one_off, customdata: data.periods, hovertemplate: '%{customdata}<br>Expenses: One-off: Rs. %{y:,.0f}<extra></extra>', width: 0.35, marker: { color: getComputedStyle(document.documentElement).getPropertyValue('--chart-5').trim() } }
     ], window.CEQWAChartLayout({
-      barmode: 'overlay',
+      barmode: 'stack',
       margin: { t: 20, r: 20, b: 40, l: 60 },
       yaxis: { title: 'Amount (Rs.)' },
       xaxis: { tickmode: 'array', tickvals: barPositions, ticktext: data.periods },
