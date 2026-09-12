@@ -5,6 +5,18 @@
     "July 2026",
     "August 2026"
   ],
+  "period_labels": [
+    "22 Dec 2025–18 May 2026",
+    "June 2026",
+    "July 2026",
+    "1 Aug 2026–4 Sep 2026"
+  ],
+  "period_types": [
+    "statement_period",
+    "calendar_month",
+    "calendar_month",
+    "partial_month"
+  ],
   "income_recurring": [
     14900.0,
     5100.0,
@@ -28,6 +40,18 @@
     0,
     6643.0,
     36303.0
+  ],
+  "expense_capex": [
+    3500.0,
+    0,
+    0,
+    0
+  ],
+  "expense_opex": [
+    42894.0,
+    4583.0,
+    11478.0,
+    39128.0
   ],
   "closing_balance": [
     46322,
@@ -79,9 +103,14 @@
   ],
   "expense_one_off_breakdown": [
     {
-      "category": "Catering and Capital Expenses",
-      "amount": 29000.0,
-      "tags": ["expense", "one_off", "food", "catering", "event"]
+      "category": "Catering and Service Charge",
+      "amount": 25500.0,
+      "tags": ["expense", "one_off", "opex", "food", "catering", "event"]
+    },
+    {
+      "category": "CAPEX: Chair Desk with Sound",
+      "amount": 3500.0,
+      "tags": ["expense", "one_off", "capex", "equipment", "furniture"]
     },
     {
       "category": "Onam Celebration",

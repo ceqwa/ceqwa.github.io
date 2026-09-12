@@ -15,6 +15,14 @@ Thumbs.db
 .env
 .env.*
 !.env.example
+*.env
+!*.env.example
+*.local
+*.local.*
+.netrc
+.npmrc
+.aws/credentials
+.gcloud/
 
 # C extensions
 *.so
@@ -215,6 +223,42 @@ cython_debug/
 # .vscode/
 # Temporary file for partial code execution
 tempCodeRunnerFile.py
+
+# Local CEQWA MCP proposals, locks, and administrative audit logs
+.ceqwa-mcp/
+incoming/
+
+# Credentials, secrets, private keys, and local authentication material
+.secrets/
+secrets/
+credentials/
+*.secret
+*.secrets
+*.token
+*.tokens
+*credentials*.json
+*service-account*.json
+*secrets*.json
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.asc
+*.gpg
+id_rsa*
+id_ed25519*
+
+# Local databases, logs, caches, and runtime state
+*.db
+*.sqlite
+*.sqlite3
+*.log
+logs/
+runtime/
+*.tfstate
+*.tfstate.*
 
 # Ruff stuff:
 .ruff_cache/

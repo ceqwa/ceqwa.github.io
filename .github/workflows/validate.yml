@@ -1,0 +1,33 @@
+name: Validate CEQWA site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Install MCP package
+        run: python -m pip install -e .
+      - name: Validate financial data
+        run: python scripts/validate_finances.py
+      - name: Test malformed financial fixtures
+        run: python scripts/test_financial_fixtures.py
+      - name: Validate site references and JSON
+        run: python scripts/validate_site.py
+      - name: Check JavaScript syntax
+        run: |
+          for file in js/*.js; do node --check "$file"; done
+      - name: Test metadata-driven UI behavior
+        run: node scripts/test_metadata_ui.js
+      - name: Test MCP administration safety
+        run: python -m unittest discover -s ops/tests -v

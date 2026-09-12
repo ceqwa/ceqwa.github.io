@@ -14,8 +14,12 @@ static website. Read the relevant skill before changing files.
 1. Inspect the existing files before editing.
 2. Preserve the existing PDF files and add Markdown companions where required.
 3. Keep `data/finances/finances.json` as the transaction-level source of truth.
+   There is no second active or authoritative financial dataset.
 4. Use the existing tag vocabulary and keep original document wording in raw
    descriptions.
-5. Run `python scripts/validate_finances.py` after financial changes.
-6. Never silently invent amounts. If a PDF cannot be read, report the missing
+5. Give every transaction a stable ID, an ISO date when evidenced, and an
+   explicit `null` date when the source does not establish one.
+6. Run the financial, fixture, site, and JavaScript checks after financial or
+   rendering changes.
+7. Never silently invent amounts. If a PDF cannot be read, report the missing
    figures instead of estimating them.

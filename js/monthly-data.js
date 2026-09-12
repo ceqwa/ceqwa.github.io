@@ -20,7 +20,7 @@
     count.textContent = rows.length + (rows.length === 1 ? ' transaction' : ' transactions');
 
     if (!rows.length) {
-      tbody.innerHTML = '<tr><td colspan="7"><div class="empty-state">No transactions recorded for this month.</div></td></tr>';
+      tbody.innerHTML = '<tr><td colspan="9"><div class="empty-state">No transactions recorded for this source period.</div></td></tr>';
       return;
     }
 
@@ -28,14 +28,19 @@
       var tags = (row.tags || []).map(escapeHtml).join(', ');
       var type = row.tags && row.tags.indexOf('income') !== -1 ? 'Income' :
         (row.tags && row.tags.indexOf('expense') !== -1 ? 'Expense' : 'Opening balance');
+      var numericAmount = Number(row.amount);
+      var displayAmount = Number.isFinite(numericAmount) ? numericAmount.toFixed(2) : 'Unavailable';
+      var recurrence = row.recurrence === 'not_applicable' ? 'Not applicable' : (row.recurrence || '');
       return '<tr>' +
         '<td>' + (index + 1) + '</td>' +
         '<td>' + type + '</td>' +
         '<td>' + escapeHtml(row.raw_category || '') + '</td>' +
         '<td>' + escapeHtml(row.raw_description || '') + '</td>' +
-        '<td>' + Number(row.amount || 0).toFixed(2) + '</td>' +
+        '<td>' + escapeHtml(row.date || 'Not specified') + '</td>' +
+        '<td>' + displayAmount + '</td>' +
         '<td class="tag-list">' + tags + '</td>' +
-        '<td>' + escapeHtml(row.recurrence || '') + '</td>' +
+        '<td>' + escapeHtml(row.accounting_class || 'Not specified') + '</td>' +
+        '<td>' + escapeHtml(recurrence) + '</td>' +
         '</tr>';
     }).join('');
   }
@@ -47,6 +52,6 @@
       select.addEventListener('change', render);
     })
     .catch(function () {
-      table.querySelector('tbody').innerHTML = '<tr><td colspan="7"><div class="state-message">Unable to load monthly data. Please try again later.</div></td></tr>';
+      table.querySelector('tbody').innerHTML = '<tr><td colspan="9"><div class="state-message">Unable to load source-period data. Please try again later.</div></td></tr>';
     });
 })();

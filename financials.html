@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CEQWA | Financials</title>
   <script>
+    document.documentElement.classList.replace('no-js', 'js');
     (function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
   </script>
+  <meta name="description" content="CEQWA financial statements, transaction data, and transparency dashboards for published association records.">
+  <link rel="icon" href="images/ceqwa-logo.jpg" type="image/jpeg">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,9 +21,9 @@
       <div class="brand">
         <span class="brand-logo" role="img" aria-label="CEQWA logo"></span>
         <span class="brand-text">
-          <span class="brand-title-hi">केंद्रीय उत्पाद शुल्क आवास निवासियों का कल्याण संघ (सेक्वा)</span>
+          <span class="brand-title-hi" lang="hi">केंद्रीय उत्पाद शुल्क आवास निवासियों का कल्याण संघ (सेक्वा)</span>
           <span class="brand-title-en">CENTRAL EXCISE QUARTERS RESIDENTS' WELFARE ASSOCIATION (CEQWA)</span>
-          <span class="brand-addr-hi">सी॰एस॰ई॰ज़ेड॰ पी॰ओ॰, काक्कनाड, कोचीन–682 037॰</span>
+          <span class="brand-addr-hi" lang="hi">सी॰एस॰ई॰ज़ेड॰ पी॰ओ॰, काक्कनाड, कोचीन–682 037॰</span>
           <span class="brand-addr-en">CSEZ. P.O., KAKKANAD, COCHIN – 682 037.</span>
         </span>
       </div>
@@ -51,7 +54,7 @@
     <div class="container">
     <section class="section">
       <h1 class="page-title">Financials</h1>
-      <p class="lead">Financial statements and transparency reports are published here.</p>
+      <p class="lead">Financial statements and transparency reports are published here. Published statement totals include the opening balance; dashboard income excludes opening balances. Period labels show the source coverage dates.</p>
       <div class="tab-bar" role="tablist" aria-label="Financials views">
         <button class="tab-btn active" id="tab-dashboard" type="button" role="tab" aria-selected="true" aria-controls="panel-dashboard" data-tab="dashboard">Dashboard</button>
         <button class="tab-btn" id="tab-monthly-dashboard" type="button" role="tab" aria-selected="false" aria-controls="panel-monthly-dashboard" data-tab="monthly-dashboard">Monthly Dashboard</button>
@@ -60,31 +63,32 @@
       </div>
       <div id="panel-dashboard" class="tab-panel active" role="tabpanel" aria-labelledby="tab-dashboard">
         <div class="dashboard-grid">
-          <div class="chart-card chart-wide"><h2 class="chart-title">Income vs Expenses</h2><div id="chart-income-expense" class="chart"></div></div>
-          <div class="chart-card chart-wide"><h2 class="chart-title">Recurring Expenses</h2><div id="chart-expense-recurring" class="chart"></div></div>
-          <div class="chart-card chart-wide"><h2 class="chart-title">One-off Expenses</h2><div id="chart-expense-oneoff" class="chart"></div></div>
-          <div class="chart-card chart-wide"><h2 class="chart-title">Cash / Bank Balance Trend</h2><div id="chart-balance" class="chart"></div></div>
+          <section class="chart-card chart-wide" aria-labelledby="income-expense-title"><h2 id="income-expense-title" class="chart-title">Income vs Expenses</h2><p id="income-expense-summary" class="chart-summary">Cash-basis income and expenses by published source period.</p><div id="chart-income-expense" class="chart" role="img" aria-labelledby="income-expense-title" aria-describedby="income-expense-summary"></div><details class="chart-data"><summary>View chart data</summary><div id="table-income-expense"></div></details></section>
+          <section class="chart-card chart-wide" aria-labelledby="recurring-expenses-title"><h2 id="recurring-expenses-title" class="chart-title">Recurring Expenses</h2><p id="recurring-expenses-summary" class="chart-summary">Recurring expense categories across all published source periods.</p><div id="chart-expense-recurring" class="chart" role="img" aria-labelledby="recurring-expenses-title" aria-describedby="recurring-expenses-summary"></div><details class="chart-data"><summary>View chart data</summary><div id="table-expense-recurring"></div></details></section>
+          <section class="chart-card chart-wide" aria-labelledby="oneoff-expenses-title"><h2 id="oneoff-expenses-title" class="chart-title">One-off Expenses</h2><p id="oneoff-expenses-summary" class="chart-summary">One-off expense categories across all published source periods.</p><div id="chart-expense-oneoff" class="chart" role="img" aria-labelledby="oneoff-expenses-title" aria-describedby="oneoff-expenses-summary"></div><details class="chart-data"><summary>View chart data</summary><div id="table-expense-oneoff"></div></details></section>
+          <section class="chart-card chart-wide" aria-labelledby="capex-opex-title"><h2 id="capex-opex-title" class="chart-title">CAPEX vs OPEX</h2><p id="capex-opex-summary" class="chart-summary">Capital expenditure is shown separately from ordinary operating expenditure.</p><div id="chart-capex-opex" class="chart" role="img" aria-labelledby="capex-opex-title" aria-describedby="capex-opex-summary"></div><details class="chart-data"><summary>View chart data</summary><div id="table-capex-opex"></div></details></section>
+          <section class="chart-card chart-wide" aria-labelledby="balance-title"><h2 id="balance-title" class="chart-title">Cash / Bank Balance Trend</h2><p id="balance-summary" class="chart-summary">Closing balance by published source period.</p><div id="chart-balance" class="chart" role="img" aria-labelledby="balance-title" aria-describedby="balance-summary"></div><details class="chart-data"><summary>View chart data</summary><div id="table-balance"></div></details></section>
         </div>
       </div>
       <div id="panel-monthly-dashboard" class="tab-panel" role="tabpanel" aria-labelledby="tab-monthly-dashboard" hidden>
         <div class="monthly-toolbar">
-          <label class="filter-label" for="monthly-dashboard-period">Select month</label>
+          <label class="filter-label" for="monthly-dashboard-period">Select source period</label>
           <select id="monthly-dashboard-period" class="filter-select">
-            <option value="">Loading months...</option>
+            <option value="">Loading source periods...</option>
           </select>
-          <span id="monthly-dashboard-count" class="filter-summary" aria-live="polite"></span>
+          <span id="monthly-dashboard-label" class="filter-summary" aria-live="polite"></span><span id="monthly-dashboard-count" class="filter-summary" aria-live="polite"></span>
         </div>
-        <div class="monthly-metrics" aria-label="Monthly totals">
+        <div class="monthly-metrics" aria-label="Selected source period totals">
           <div class="metric-card"><span class="metric-label">Opening Balance</span><strong id="monthly-opening">Rs. 0.00</strong></div>
           <div class="metric-card"><span class="metric-label">Income</span><strong id="monthly-income">Rs. 0.00</strong></div>
           <div class="metric-card"><span class="metric-label">Expenses</span><strong id="monthly-expenses">Rs. 0.00</strong></div>
           <div class="metric-card"><span class="metric-label">Closing Balance</span><strong id="monthly-closing">Rs. 0.00</strong></div>
         </div>
         <div class="dashboard-grid monthly-dashboard-grid">
-          <div class="chart-card chart-wide"><h2 class="chart-title">Sources and Uses by Activity</h2><div id="chart-monthly-flow" class="chart"></div></div>
-          <div class="chart-card"><h2 class="chart-title">Income Sources</h2><div id="chart-monthly-income" class="chart"></div></div>
-          <div class="chart-card"><h2 class="chart-title">Expense Categories</h2><div id="chart-monthly-expenses" class="chart"></div></div>
-          <div class="chart-card chart-wide"><h2 class="chart-title">Income and Expenses by Recurrence</h2><div id="chart-monthly-recurrence" class="chart"></div></div>
+          <section class="chart-card chart-wide" aria-labelledby="monthly-flow-title"><h2 id="monthly-flow-title" class="chart-title">Sources and Uses by Activity</h2><p class="chart-summary">Cash-basis activity for the selected source period.</p><div id="chart-monthly-flow" class="chart" role="img" aria-labelledby="monthly-flow-title"></div><details class="chart-data"><summary>View chart data</summary><div id="table-monthly-flow"></div></details></section>
+          <section class="chart-card" aria-labelledby="monthly-income-title"><h2 id="monthly-income-title" class="chart-title">Income Sources</h2><p class="chart-summary">Income categories for the selected source period.</p><div id="chart-monthly-income" class="chart" role="img" aria-labelledby="monthly-income-title"></div><details class="chart-data"><summary>View chart data</summary><div id="table-monthly-income"></div></details></section>
+          <section class="chart-card" aria-labelledby="monthly-expenses-title"><h2 id="monthly-expenses-title" class="chart-title">Expense Categories</h2><p class="chart-summary">Expense categories for the selected source period.</p><div id="chart-monthly-expenses" class="chart" role="img" aria-labelledby="monthly-expenses-title"></div><details class="chart-data"><summary>View chart data</summary><div id="table-monthly-expenses"></div></details></section>
+          <section class="chart-card chart-wide" aria-labelledby="monthly-recurrence-title"><h2 id="monthly-recurrence-title" class="chart-title">Income and Expenses by Recurrence</h2><p class="chart-summary">Recurring and one-off cash flows for the selected source period.</p><div id="chart-monthly-recurrence" class="chart" role="img" aria-labelledby="monthly-recurrence-title"></div><details class="chart-data"><summary>View chart data</summary><div id="table-monthly-recurrence"></div></details></section>
         </div>
       </div>
       <div id="panel-finances" class="tab-panel" role="tabpanel" aria-labelledby="tab-finances" hidden>
@@ -92,31 +96,42 @@
           <div class="table-scroll">
             <table id="financials-table" class="data-table">
               <thead>
-                <tr><th>#</th><th>Description</th><th>Period</th><th>Amount</th><th>Download</th></tr>
+                <tr><th scope="col">#</th><th scope="col">Description</th><th scope="col">Source coverage</th><th scope="col">Total sources (Rs.)</th><th scope="col">Download</th></tr>
               </thead>
               <tbody>
                 <tr class="state-row"><td colspan="5" class="state-message">Loading financial records&hellip;</td></tr>
               </tbody>
             </table>
           </div>
+          <noscript>
+            <div class="noscript-fallback">
+              <p>JavaScript is disabled. Use these direct links to the published financial statements.</p>
+              <table class="data-table"><caption>Published financial statements</caption><thead><tr><th scope="col">Source period</th><th scope="col">Statement</th><th scope="col">PDF</th><th scope="col">Markdown</th></tr></thead><tbody>
+                <tr><td>22 Dec 2025–18 May 2026</td><td>May 2026 source statement</td><td><a class="action" href="financials/05.2026.pdf">PDF</a></td><td><a class="action" href="financials/05.2026.md">Markdown</a></td></tr>
+                <tr><td>June 2026</td><td>June 2026 statement</td><td><a class="action" href="financials/06.2026.pdf">PDF</a></td><td><a class="action" href="financials/06.2026.md">Markdown</a></td></tr>
+                <tr><td>July 2026</td><td>July 2026 statement</td><td><a class="action" href="financials/07.2026.pdf">PDF</a></td><td><a class="action" href="financials/07.2026.md">Markdown</a></td></tr>
+                <tr><td>1 Aug 2026–4 Sep 2026</td><td>August 2026 source statement</td><td><a class="action" href="financials/08.2026.pdf">PDF</a></td><td><a class="action" href="financials/08.2026.md">Markdown</a></td></tr>
+              </tbody></table>
+            </div>
+          </noscript>
         </div>
       </div>
       <div id="panel-monthly-data" class="tab-panel" role="tabpanel" aria-labelledby="tab-monthly-data" hidden>
         <div class="panel">
           <div class="monthly-toolbar">
-          <label class="filter-label" for="monthly-period">Select month</label>
+          <label class="filter-label" for="monthly-period">Select source period</label>
           <select id="monthly-period" class="filter-select">
-              <option value="">Loading months...</option>
+              <option value="">Loading source periods...</option>
             </select>
             <span id="monthly-count" class="filter-summary" aria-live="polite"></span>
           </div>
           <div class="table-scroll">
             <table id="monthly-data-table" class="data-table">
               <thead>
-                <tr><th>#</th><th>Type</th><th>Category</th><th>Description</th><th>Amount (Rs.)</th><th>Tags</th><th>Recurrence</th></tr>
+                <tr><th scope="col">#</th><th scope="col">Type</th><th scope="col">Category</th><th scope="col">Description</th><th scope="col">Date</th><th scope="col">Amount (Rs.)</th><th scope="col">Tags</th><th scope="col">Accounting class</th><th scope="col">Recurrence</th></tr>
               </thead>
               <tbody>
-                <tr class="state-row"><td colspan="7" class="state-message">Loading monthly data&hellip;</td></tr>
+                <tr class="state-row"><td colspan="9" class="state-message">Loading source-period data&hellip;</td></tr>
               </tbody>
             </table>
           </div>
@@ -138,7 +153,7 @@
   <script src="js/chart-colors.js"></script>
   <script src="js/monthly-options.js"></script>
   <script src="js/monthly-data.js"></script>
-  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" integrity="sha384-cCVCZkAjYNxaYKbM8lsArLznDF/SvMFr1jcZrvOpSTCa0W40ZAdLzHCEulnUa5i7" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/dashboard.js"></script>
   <script src="js/monthly-dashboard.js"></script>
 </body>

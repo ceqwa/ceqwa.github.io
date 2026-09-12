@@ -7,13 +7,12 @@ Funds Statement.
 
 - `financials/<period>.pdf` - original published statement
 - `financials/<period>.md` - machine-readable companion
-- `data/financials.json` - published statement index
+- `data/metadata.json` - published statement metadata in the `financials` array
 - `data/finances/finances.json` - individual transactions and opening balance
 - `data/financials-dashboard.json` - main dashboard period arrays and breakdowns
 
-`data/finances/finances_accrual.json` is an alternative dataset and is not read
-by the website. Update it only when the accrual dataset is intentionally being
-maintained as well.
+`data/finances/finances.json` is the single canonical transaction dataset. Do
+not create or maintain a second unexplained financial dataset.
 
 ## Procedure
 
@@ -24,19 +23,24 @@ maintained as well.
    `total_expenses`, and `closing_balance`.
 3. Use plain numeric amounts in Markdown tables. Do not put currency symbols
    or thousands separators inside numeric cells.
-4. Add the PDF and Markdown paths to one entry in `data/financials.json`.
-5. Add one raw transaction object for every individual line item. Preserve the
-   original `raw_category` and `raw_description`.
+4. Add the PDF and Markdown paths to one entry in the `financials` array in
+   `data/metadata.json`.
+5. Add one transaction object for every individual line item. Preserve the
+   original `raw_category` and `raw_description`, assign a deterministic stable
+   `transaction_id`, and use an evidenced ISO `date` or `null`.
 6. Add the statement's carried-forward opening balance as a transaction with
-   the `opening_balance` tag.
-7. Use `income` or `expense` flow tags, a recurrence value of `recurring` or
-   `one_off`, and relevant category/function tags.
+   the `opening_balance` tag, `accounting_class: "opening_balance"`, and
+   `recurrence: "not_applicable"`.
+7. Use exactly one flow tag, a recurrence value of `recurring`, `one_off`, or
+   `not_applicable`, and an accounting class of `income`, `opex`, or `capex`.
 8. Extend every period-indexed array in `data/financials-dashboard.json` in the
    same order as `periods`.
 9. Update recurring and one-off dashboard breakdowns so their totals still
    equal the corresponding series totals. Use meaningful categories and group
    only small items when individual slices would be unreadable.
-10. Run `python scripts/validate_finances.py`.
+10. Run `python scripts/validate_finances.py`,
+    `python scripts/test_financial_fixtures.py`, and
+    `python scripts/validate_site.py`.
 
 ## Reconciliation
 
@@ -52,10 +56,15 @@ statement total includes opening balances.
 
 ## UI Behavior
 
-The Finances table reads `data/financials.json`.
+The Finances table reads the `financials` array from `data/metadata.json`.
 
-The Monthly Data and Monthly Dashboard selectors discover periods from
-`data/finances/finances.json`; no HTML option needs to be added manually.
+The Monthly Data and Monthly Dashboard selectors discover periods from the
+`financials` array in `data/metadata.json`; transactions are only associated with
+those published periods after discovery. No HTML option needs to be added manually.
+
+Metadata periods are ordered chronologically by `start_date`, then end date,
+period ID, and source file. Unknown metadata fields and duplicate period IDs,
+period values, or source files are rejected.
 
 The main Dashboard reads `data/financials-dashboard.json`, so its period arrays and
 breakdowns must be updated for every new period.

@@ -21,6 +21,7 @@
       root.setAttribute('data-theme', next);
       try { localStorage.setItem('theme', next); } catch (e) {}
       syncTheme();
+      window.dispatchEvent(new Event('ceqwa:themechange'));
     });
     syncTheme();
   }

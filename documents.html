@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CEQWA | Documents</title>
   <script>
+    document.documentElement.classList.replace('no-js', 'js');
     (function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
   </script>
+  <meta name="description" content="Official CEQWA documents and reports published for residents and the public.">
+  <link rel="icon" href="images/ceqwa-logo.jpg" type="image/jpeg">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,9 +21,9 @@
       <div class="brand">
         <span class="brand-logo" role="img" aria-label="CEQWA logo"></span>
         <span class="brand-text">
-          <span class="brand-title-hi">केंद्रीय उत्पाद शुल्क आवास निवासियों का कल्याण संघ (सेक्वा)</span>
+          <span class="brand-title-hi" lang="hi">केंद्रीय उत्पाद शुल्क आवास निवासियों का कल्याण संघ (सेक्वा)</span>
           <span class="brand-title-en">CENTRAL EXCISE QUARTERS RESIDENTS' WELFARE ASSOCIATION (CEQWA)</span>
-          <span class="brand-addr-hi">सी॰एस॰ई॰ज़ेड॰ पी॰ओ॰, काक्कनाड, कोचीन–682 037॰</span>
+          <span class="brand-addr-hi" lang="hi">सी॰एस॰ई॰ज़ेड॰ पी॰ओ॰, काक्कनाड, कोचीन–682 037॰</span>
           <span class="brand-addr-en">CSEZ. P.O., KAKKANAD, COCHIN – 682 037.</span>
         </span>
       </div>
@@ -52,6 +55,7 @@
     <section class="section">
       <h1 class="page-title">Documents</h1>
       <p class="lead">Official documents and reports are published here.</p>
+      <noscript><p class="state-message">JavaScript is disabled. No official documents have been uploaded yet.</p></noscript>
       <div class="panel">
         <div class="table-scroll">
           <table id="documents-table" class="data-table">

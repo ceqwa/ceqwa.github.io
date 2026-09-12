@@ -1,8 +1,26 @@
 (function () {
-  var names = ['--chart-1', '--chart-2', '--chart-3', '--chart-4', '--chart-5', '--chart-6', '--chart-7', '--chart-8', '--chart-9', '--chart-10'];
+  var paletteSize = 10;
+  var startingHue = 210;
+  var goldenAngle = 137.508;
+
+  function isDarkTheme() {
+    return document.documentElement.getAttribute('data-theme') === 'dark';
+  }
+
+  function chartColor(index) {
+    var hue = (startingHue + (index * goldenAngle)) % 360;
+    var lightness = isDarkTheme() ? 63 : 43;
+    return 'hsl(' + hue.toFixed(1) + ', 68%, ' + lightness + '%)';
+  }
+
   window.CEQWAChartColors = function () {
-    var styles = getComputedStyle(document.documentElement);
-    return names.map(function (name) { return styles.getPropertyValue(name).trim(); });
+    return Array.from({ length: paletteSize }, function (_, index) { return chartColor(index); });
+  };
+  window.CEQWAChartColor = function (index) {
+    return chartColor(index % paletteSize);
+  };
+  window.CEQWAChartSeparator = function () {
+    return getComputedStyle(document.documentElement).getPropertyValue('--surface').trim();
   };
   window.CEQWAChartLayout = function (layout) {
     var styles = getComputedStyle(document.documentElement);
