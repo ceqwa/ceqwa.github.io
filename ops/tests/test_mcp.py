@@ -32,7 +32,7 @@ class FixtureCase(unittest.TestCase):
 
     def test_path_sandbox(self):
         repo = self.api.repository
-        for bad in ("../secret", "../../secret", "/etc/passwd", r"C:\outside\file", r"\\server\share\x"):
+        for bad in ("../secret", "../../secret", "/etc/passwd", r"C:\outside\file", r"C:/outside/file", r"\\server\share\x", r"safe\..\outside"):
             with self.assertRaises(CeqwaError) as error:
                 repo.resolve_repo_path(bad)
             self.assertEqual(error.exception.code, "INVALID_PATH")

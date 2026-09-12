@@ -27,9 +27,21 @@ class Repository:
 
     def resolve_repo_path(self, path: str | Path, *, allow_incoming: bool = False) -> Path:
         """Resolve a user path while rejecting traversal, absolute, and symlink escapes."""
-        raw = str(path)
+        # Path objects are already parsed by the local runtime; normalize
+        # their separators so internal Windows paths remain portable. Raw
+        # strings are checked as supplied so Windows syntax cannot bypass the
+        # sandbox on POSIX.
+        raw = path.as_posix() if isinstance(path, Path) else str(path)
         supplied = Path(raw)
-        if supplied.is_absolute() or supplied.drive or raw.startswith(("\\\\", "/")):
+        # Reject both host-native absolute paths and Windows path syntax even
+        # when validation runs on POSIX (where Path treats backslashes as text).
+        if (
+            supplied.is_absolute()
+            or supplied.drive
+            or raw.startswith(("/", "\\"))
+            or (len(raw) > 1 and raw[1] == ":")
+            or "\\" in raw
+        ):
             raise CeqwaError("INVALID_PATH", "Absolute and UNC paths are not allowed", {"path": raw})
         roots = [self.root]
         if allow_incoming:
