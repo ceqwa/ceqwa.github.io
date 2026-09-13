@@ -17,6 +17,10 @@ function addCell(row, value, className) {
   return cell;
 }
 
+function setDownload(link, path) {
+  link.download = path.split('/').pop() || 'download';
+}
+
 function compareFinancialPeriods(left, right) {
   function compareText(first, second) {
     first = String(first); second = String(second);
@@ -91,6 +95,7 @@ function renderTable(config) {
               var markdownLink = document.createElement('a');
               markdownLink.className = 'action';
               markdownLink.href = markdownPath;
+              setDownload(markdownLink, markdownPath);
               markdownLink.textContent = 'Markdown';
               cell.appendChild(separator);
               cell.appendChild(markdownLink);
